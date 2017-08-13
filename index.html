@@ -62,7 +62,7 @@
 }
 
 .custom-toggle .bar {
-    background-color: #777;
+    background-color: #fff;
     display: block;
     width: 20px;
     height: 2px;
@@ -97,14 +97,18 @@
     transform: rotate(-45deg);
 }
 
-table tr th:first-child {
+.custom-event-table tr th:first-child {
     font-weight: bold;
     text-align: right;
 }
 
-table tr td:first-child {
+.custom-event-table tr td:first-child {
     font-weight: bold;
     text-align: right;
+}
+
+.custom-event-table tr td {
+    vertical-align: top;
 }
 
 @media (max-width: 47.999em) {
@@ -166,7 +170,7 @@ table tr td:first-child {
     <div class="pure-u-1-24 pure-u-md-1-6"></div>
     <div class="pure-u-11-12 pure-u-md-2-3">
     <h2>event schedule</h2>
-    <table class="pure-table" style="width: 100%;">
+    <table class="pure-table custom-event-table" style="width: 100%;">
         <thead>
             <tr>
                 <th>event</th>
