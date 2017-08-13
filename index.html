@@ -1,63 +1,296 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>health and beauty</title>
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <style type="text/css">
-    body{
-        font-family: 'Share Tech Mono', monospace;
+  <title>h + b</title>
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+<!--<![endif]-->
+
+<style>
+
+/*#menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+}*/
+
+.custom-brand {
+    color: #fff;
+    text-transform: lowercase;
+}
+
+.custom-wrapper {
+    color: #eee;
+    background-color: #ffbc00;
+    margin-bottom: 1em;
+    -webkit-font-smoothing: antialiased;
+    height: 2.1em;
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.custom-wrapper.open {
+    height: 14em;
+}
+
+.custom-menu-5 {
+    color: #fff;
+    text-align: right;
+}
+.custom-menu-5 a{
+    color: #fff;
+}
+
+.custom-toggle {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.custom-toggle .bar {
+    background-color: #777;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 18px;
+    right: 7px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+table tr td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+@media (max-width: 47.999em) {
+
+    .custom-menu-3 {
+        text-align: left;
     }
-    header {
-        font-size: 3em;
+
+    .custom-toggle {
+        display: block;
     }
-    .splash {
-        background-color: #eee;
-        width: 800px;
-        height: 300px;
-    }
-    .main {
-        width: 800px;
-    }
-    </style>
+
+}
+</style>
+<link href="main.css" rel="stylesheet">
+
 </head>
 <body>
-    <header>health and beauty</header>
-    <div class="main">
-        <div class="splash">
-            
+
+<div class="custom-wrapper pure-g" id="menu">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pure-menu">
+            <a href="#" class="pure-menu-heading custom-brand">h+b</a>
+            <a href="#" class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <p>Health and Beauty is an improvisational ensemble, working in the realm between chance and strategy, interweaving analog, digital and acoustic sources into dense, elastic sound/media constructions.</p>
-        <p>
-            <ul class="sc-list-nostyle sc-clearfix"><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=https%3A%2F%2Fwww.facebook.com%2Fpages%2FHealth-and-Beauty%2F196745890344946" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-facebook"></span>
-              Facebook
-            </a>
-            </div></li><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=http%3A%2F%2Fvimeo.com%2Fuser336890" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-vimeo"></span>
-              Vimeo
-            </a>
-            </div></li><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=http%3A%2F%2Fvimeo.com%2F58832407" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-vimeo"></span>
-              Aqueotrope video for Servo, by Ryan Tyler Martinez
-            </a>
-            </div></li><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=https%3A%2F%2Fwww.facebook.com%2Fmedia%2Fset%2F%3Fset%3Dvb.196745890344946%26type%3D2" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-facebook"></span>
-              Performance videos on our Facebook page
-            </a>
-            </div></li><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=http%3A%2F%2Fyoutu.be%2Fn4y6VuaCwyU" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-other"></span>
-              Soundtrack for the Architecture + Design Museum's "COME IN! 2: Surf. Skate. Bike" promo video
-            </a>
-            </div></li><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=https%3A%2F%2Fwww.bandpage.com%2FHealthandBeauty" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-bandpage"></span>
-              Bandpage
-            </a>
-            </div></li><li class="web-profiles__item"><div class="sc-truncate"><a href="https://exit.sc?url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC-eqsoZDog67w87ElfNSLBA" target="_blank" rel="me nofollow" class="web-profile sc-link-light sc-social-logo-interactive">
-              <span class="sc-social-logo sc-social-logo-youtube"></span>
-              YouTube
-            </a>
-            </div></li></ul>
-        </p>
     </div>
+
+    <div class="pure-u-1 pure-u-md-2-3" style="text-align: right;">
+        <div class="pure-menu pure-menu-horizontal custom-menu-5 custom-can-transform">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-facebook-square"></i></a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-soundcloud"></i></a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-bandcamp"></i></a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-vimeo-square"></i></a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+    <div class="pure-u-2-3 pure-u-md-2-3">
+        <header>health<br />and<br />beauty</header>
+    </div>
+    <div class="pure-u-1-6 pure-u-md-1-6"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+    <div class="pure-u-11-12 pure-u-md-2-3">
+        <p>Health and Beauty is an improvisational ensemble, working in the realm between chance and strategy, interweaving analog, digital and acoustic sources into dense, elastic sound/media constructions.</p>
+        <div class="splash"></div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="pure-g" style="margin: 4em 0;">
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+    <div class="pure-u-11-12 pure-u-md-2-3">
+    <h2>event schedule</h2>
+    <table class="pure-table" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <td>7 Point Perspective</td>
+            <td>Marina Del Ray, 2017</td>
+        </tr>
+        <tr>
+            <td>Dreamtime / Year of the Monkey</td>
+            <td>SPACE Gallery Claremont, 2016</td>
+        </tr>
+        <tr>
+            <td>Papercuts</td>
+            <td>SPACE Gallery Claremont, 2016</td>
+        </tr>
+        <tr>
+            <td>4/Way House</td>
+            <td>soundtrack, 2015</td>
+        </tr>
+        <tr>
+            <td>Year of the Sheep</td>
+            <td>SPACE Gallery Pomona, 2015</td>
+        </tr>
+        <tr>
+            <td>Contagion of Difference</td>
+            <td>SPACE Gallery Pomona, 2015</td>
+        </tr>
+        <tr>
+            <td>Year of the Horse</td>
+            <td>Design Matters Gallery, 2014</td>
+        </tr>
+        <tr>
+            <td>Year of the Snake</td>
+            <td>Design Matters Gallery, 2013</td>
+        </tr>
+        <tr>
+            <td><a href="https://vimeo.com/58832407">Aqueotrope</a></td>
+            <td>soundtrack, 2013</td>
+        </tr>
+        <tr>
+            <td>Apollo Festival</td>
+            <td>1019 West Art Studios, 2012</td>
+        </tr>
+        <tr>
+            <td>bracket [Goes Soft] launch</td>
+            <td>WUHO Gallery, 2012</td>
+        </tr>
+        <tr>
+            <td>Year of the Dragon</td>
+            <td>Design Matters Gallery, 2012</td>
+        </tr>
+        <tr>
+            <td>Come In! 2 - Surf. Skate. Bike.</td>
+            <td>A+D Museum, 2011</td>
+        </tr>
+        <tr>
+            <td>Mas Context - Aberration launch</td>
+            <td>WUHO Gallery, 2011</td>
+        </tr>
+        <tr>
+            <td>The Music Room</td>
+            <td>Ed Freeman Gallery, 2011</td>
+        </tr>
+        <tr>
+            <td>Broodwork</td>
+            <td>OTIS College of Art and Design, 2011</td>
+        </tr>
+        <tr>
+            <td>Polytopes, The Architecture of Soundscapes</td>
+            <td>Southern California Institute of Architecture, 2011</td>
+        </tr>
+        <tr>
+            <td>Made-Up: Design’s Fictions</td>
+            <td>Art Center College of Design, 2011</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script>
+(function (window, document) {
+var menu = document.getElementById('menu'),
+    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+
+function toggleHorizontal() {
+    [].forEach.call(
+        document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+        function(el){
+            el.classList.toggle('pure-menu-horizontal');
+        }
+    );
+};
+
+function toggleMenu() {
+    // set timeout so that the panel has a chance to roll up
+    // before the menu switches states
+    if (menu.classList.contains('open')) {
+        setTimeout(toggleHorizontal, 500);
+    }
+    else {
+        toggleHorizontal();
+    }
+    menu.classList.toggle('open');
+    document.getElementById('toggle').classList.toggle('x');
+};
+
+function closeMenu() {
+    if (menu.classList.contains('open')) {
+        toggleMenu();
+    }
+}
+
+document.getElementById('toggle').addEventListener('click', function (e) {
+    toggleMenu();
+    e.preventDefault();
+});
+
+window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+})(this, this.document);
+
+</script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+html, button, input, select, textarea,
+    .pure-g [class *= "pure-u"] {
+        font-family: 'Share Tech Mono', monospace;
+}
+
+header {
+    font-size: 4em;
+    margin-bottom: 0.3em;
+}
+
+.splash {
+    background-color: #eee;
+    height: 300px;
+    border-radius: 4px;
+}
