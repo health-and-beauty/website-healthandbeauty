@@ -8,6 +8,11 @@ header {
     margin-bottom: 0.3em;
 }
 
+.main_container {
+    position: relative;
+    top: 2.1em;
+}
+
 .splash {
     background-color: #eee;
     height: 300px;
@@ -16,4 +21,116 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 80%;
+}
+
+
+
+.custom-brand {
+    color: #fff;
+    text-transform: lowercase;
+}
+
+.custom-wrapper {
+    color: #eee;
+    background-color: #ffbc00;
+    margin-bottom: 1em;
+    -webkit-font-smoothing: antialiased;
+    height: 2.1em;
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.custom-wrapper.open {
+    height: 14em;
+}
+
+.custom-menu-5 {
+    color: #fff;
+    text-align: right;
+}
+.custom-menu-5 a{
+    color: #fff;
+}
+
+.custom-toggle {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.custom-toggle .bar {
+    background-color: #fff;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 18px;
+    right: 7px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-event-table {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.custom-event-table tr th:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+.custom-event-table tr td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+.custom-event-table tr td {
+    vertical-align: top;
+}
+
+@media (max-width: 47.999em) {
+
+    .custom-menu-5 {
+        text-align: center;
+    }
+
+    .custom-toggle {
+        display: block;
+    }
+
 }
