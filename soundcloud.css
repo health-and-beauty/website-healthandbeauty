@@ -1,0 +1,62 @@
+/* https://codepen.io/nickcolley/pen/uoCIy */
+/*body {
+  overflow: hidden;
+  background-color: #eee;
+}*/
+
+iframe { display: none; }
+
+.player {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  top: 2.1em;
+/*  height: 20px;*/
+  width: 100%;
+  
+  background-color: #d0d0d0;
+  background-size: cover;
+  background-position: center;
+  /*transition: background-image 1s linear, opacity 1s, bottom 1s;*/
+  transition: all 1s;
+}
+
+.waveform {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: 100% 100%;
+  transition: background-image 1s linear;
+}
+
+.position {
+  opacity: 1;
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  
+  background-color: #ffbc00;
+  transition: width .1s linear;
+}
+
+.info {
+  user-select: none;
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 0.7em;
+  line-height: 22px;
+  
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  
+  color: #aaa;
+}
