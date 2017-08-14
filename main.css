@@ -12,4 +12,8 @@ header {
     background-color: #eee;
     height: 300px;
     border-radius: 4px;
+    background-image: url('/images/923484_752790561407140_1551262826_n.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 80%;
 }
