@@ -11,7 +11,7 @@ header {
 
 .main_container {
     position: relative;
-    top: 2.1em;
+    /*top: 2.1em;*/
 }
 
 
@@ -22,7 +22,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 80%;
-    padding: 70px 0 0;
+    padding: 96px 0 0;
     box-sizing: border-box;
     opacity: 0.8;
 }
@@ -30,13 +30,12 @@ header {
 
 
 .custom-brand {
-    color: #fff;
     text-transform: lowercase;
 }
 
 .custom-wrapper {
     /*color: #eee;*/
-    background-color: #4c4c4c;
+    /*background-color: #4c4c4c;*/
     margin-bottom: 1em;
     -webkit-font-smoothing: antialiased;
     height: 2.1em;
@@ -46,8 +45,8 @@ header {
     -ms-transition: height 0.5s;
     transition: height 0.5s;
 
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 500px;
     left: 0;
     right: 0;
 }
@@ -57,11 +56,11 @@ header {
 }
 
 .custom-menu-5 {
-    color: #dcdcdc;
+    color: #aaa;
     text-align: right;
 }
 .custom-menu-5 a{
-    color: #dcdcdc;
+    color: #aaa;
 }
 
 .custom-toggle {
@@ -111,6 +110,12 @@ header {
 
 .custom-event-table {
     background: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.custom-event-table thead {
+    background: none;
+    font-size: 2.2em; 
 }
 
 .custom-event-table tr th:first-child {

@@ -51,6 +51,4 @@ iframe { display: none; }
   line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin-left: 0.8em;
-  opacity: 0.5;
 }
