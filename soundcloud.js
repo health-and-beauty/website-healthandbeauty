@@ -3,25 +3,31 @@
 $(document).ready(function(){
   
   var player = SC.Widget($('iframe.sc-widget')[0]);
-  var pOffset = $('.player').offset();
-  var pWidth = $('.player').width();
-  var scrub;
-  
+  var isPlaying = false;
+
+  window.player = player;
+  window.SC = SC;
+
   player.bind(SC.Widget.Events.READY, function() {
     setInfo();
     player.play();
-  }); //Set info on load
+  });
   
   player.bind(SC.Widget.Events.PLAY_PROGRESS, function(e) {
-    if( e.relativePosition < 0.003 ) { setInfo(); }
-    //Event listener when track is playing
     $('.position').css('width', ( e.relativePosition*100)+"%");
+    setTime();
   });
-  
-   $('.player').mousemove(function(e){ //Get position of mouse for scrubbing
-    scrub = (e.pageX-pOffset.left);
+
+  player.bind(SC.Widget.Events.PAUSE, function(e) {
+    isPlaying = false;
+    setInfo();
   });
-  
+
+  player.bind(SC.Widget.Events.PLAY, function(e) {
+    isPlaying = true;
+    setInfo();
+  });
+
   $(document).on('keydown', function(e){
     switch(e.keyCode){
       case 32:
@@ -39,49 +45,65 @@ $(document).ready(function(){
     }
   });
 
-  $('.player').click(function(){ //Use the position to seek when clicked
-    $('.position').css('width',scrub+"px");
+  $('.player').click(function(e){ //Use the position to seek when clicked
+    var pOffset = $('.player').offset();
+    var pWidth = $('.player').width();
+    var scrub = e.pageX-pOffset.left;
     var seek = player.duration*(scrub/pWidth); 
-    
-    //Seeking to the start would be a previous?
-    if ( seek < player.duration * .05 ) {
-      player.prev();
-    } else if ( seek > player.duration * .99 ) {
-      player.next();
-    } else {      
-      player.seekTo(seek);
-    }
-    
+    $('.position').css('width',scrub+"px");
+    player.seekTo(seek);
   });
-  
-   function setInfo() {
+    
+  $('.song_title').click(function(){
+    player.toggle();
+  });
+ 
+  function msToTime(s) {
+    function pad(n, z) {
+      z = z || 2;
+      return ('00' + n).slice(-z);
+    }
+    var ms = s % 1000;
+    s = (s - ms) / 1000;
+    var secs = s % 60;
+    s = (s - secs) / 60;
+    var mins = s % 60;
+    var hrs = (s - mins) / 60;
+    return pad(hrs) + ':' + pad(mins) + ':' + pad(secs) + '.' + pad(ms, 3);
+  }
+
+  function setTime() {
+    player.getPosition(function(value){
+      player.position = value;
+    });
+    var time = msToTime(player.position);
+    $('.song_title_time').html(' ('+time+')');
+  }
+
+  function setInfo() {
+    player.getDuration(function(value){
+      player.duration = value;
+    });
+
     player.getCurrentSound(function(song) {
       
         // Soundcloud just borked this api endpoint, hence this hack :/
         var waveformPng =
             song.waveform_url
                 .replace('json', 'png')
-                .replace('wis', 'w1');      
-        var artworkUrl = song.artwork_url || '';
-        
-       // console.log(song);
-      
-      $('.waveform').css('background-image', "url('" + waveformPng + "')");    
-      $('.player').css('background-image', "url('" + artworkUrl.replace('-large', '-t500x500') + "')");
-      
-      var info = song.title;
-      $('.info').html('▶ ' + info);
+                .replace('wis', 'w1');
+              
+      $('.waveform').css('background-image', "url('" + waveformPng + "')");
+      var icon = (isPlaying) ? '&#10073;&#10073; ' : '▶ ';
+      $('.song_title_button').html(icon);
+      $('.song_title_info').html(song.title);
+      setTime();
       
       player.current = song;
     });
-    
-    player.getDuration(function(value){
-      player.duration = value;
-    });
 
-    player.isPaused(function(bool){
-      player.getPaused = bool;
-    });
   }   
-  
+
 });
+
+
